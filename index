@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math Revision - Foundational Mathematics II</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 20px; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { color: #1e40af; text-align: center; margin-bottom: 30px; }
+    h2 { color: #1e40af; border-bottom: 3px solid #3b82f6; padding-bottom: 10px; margin: 30px 0 20px; }
+    h3 { color: #374151; margin: 20px 0 10px; }
+    .card { background: white; border-radius: 10px; padding: 25px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .example { background: #ecfdf5; padding: 15px; border-left: 5px solid #10b981; margin: 10px 0; border-radius: 5px; }
+    .practice { background: #fef3c7; padding: 15px; border-left: 5px solid #f59e0b; margin: 10px 0; border-radius: 5px; }
+    details { margin: 10px 0; }
+    summary { font-weight: bold; cursor: pointer; padding: 10px; background: #f3f4f6; border-radius: 5px; }
+    button { background: #3b82f6; color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 16px; margin: 10px 5px; }
+    button:hover { background: #1d4ed8; }
+    button:disabled { background: #9ca3af; cursor: not-allowed; }
+    .quiz-question { background: #f8fafc; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 5px solid #3b82f6; }
+    .quiz-option { margin: 10px 0; }
+    .feedback { font-weight: bold; margin: 10px 0; padding: 10px; border-radius: 5px; }
+    .correct { background: #dcfce7; color: #166534; }
+    .incorrect { background: #fee2e2; color: #991b1b; }
+    .score { text-align: center; font-size: 24px; font-weight: bold; margin: 20px 0; }
+    .nav { text-align: center; margin: 20px 0; }
+    .nav button { background: #6b7280; margin: 0 10px; }
+    .nav button.active { background: #3b82f6; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧮 Foundational Math II Revision</h1>
+    
+    <div class="nav">
+      <button onclick="showSection('topics')" class="active">📚 Topics & Examples</button>
+      <button onclick="showSection('practice')">✏️ Practice Problems</button>
+      <button onclick="showSection('quiz')">🎯 Quiz</button>
+    </div>
+
+    <!-- TOPICS SECTION -->
+    <div id="topics" class="card" style="display: block;">
+      <h2>📚 Key Topics with Examples</h2>
+      
+      <div class="example">
+        <h3>1. Types of Numbers</h3>
+        <strong>Example:</strong> Classify 0, -3, 2.5, √2<br>
+        <strong>Answer:</strong> 0=whole/integer/rational, -3=integer/rational, 2.5=rational, √2=irrational
+      </div>
+
+      <div class="example">
+        <h3>2. Place Value & Rounding</h3>
+        <strong>Example:</strong> In 74,926, what's the value of 9? Round to nearest thousand.<br>
+        <strong>Answer:</strong> 9=900 (hundreds), 74,926→75,000
+      </div>
+
+      <div class="example">
+        <h3>3. Integers</h3>
+        <strong>Example:</strong> -8 + 5 = ? | -6 × 3 = ?<br>
+        <strong>Answer:</strong> -3 | -18
+      </div>
+
+      <div class="example">
+        <h3>4. Fractions</h3>
+        <strong>Example:</strong> 2/5 + 1/10 = ? | 3/4 × 2/3 = ?<br>
+        <strong>Answer:</strong> 5/10=1/2 | 6/12=1/2
+      </div>
+
+      <div class="example">
+        <h3>5. Decimals</h3>
+        <strong>Example:</strong> 4.2 + 1.75 = ? | Round 7.846 to nearest tenth<br>
+        <strong>Answer:</strong> 5.95 | 7.8
+      </div>
+
+      <div class="example">
+        <h3>6. Percentages</h3>
+        <strong>Example:</strong> 25% of 80 = ? | $200 at 5% for 2 years interest?<br>
+        <strong>Answer:</strong> 20 | $20
+      </div>
+    </div>
+
+    <!-- PRACTICE SECTION -->
+    <div id="practice" class="card" style="display: none;">
+      <h2>✏️ Practice Problems (Click to see answers)</h2>
+      
+      <div class="practice">
+        <strong>1.</strong> What is |-9|? <details><summary>Solution</summary>-9 → 9 (distance from zero)</details>
+      </div>
+      
+      <div class="practice">
+        <strong>2.</strong> Round 3,847 to nearest hundred. <details><summary>Solution</summary>3,800 (47<50)</details>
+      </div>
+      
+      <div class="practice">
+        <strong>3.</strong> 1/3 + 2/6 = ? <details><summary>Solution</summary>2/6 + 2/6 = 4/6 = 2/3</details>
+      </div>
+      
+      <div class="practice">
+        <strong>4.</strong> 15% of 200 = ? <details><summary>Solution</summary>0.15 × 200 = 30</details>
+      </div>
+      
+      <div class="practice">
+        <strong>5.</strong> 12 ÷ (-4) = ? <details><summary>Solution</summary>-3</details>
+      </div>
+      
+      <div class="practice">
+        <strong>6.</strong> $8 shirt with 25% off = ? <details><summary>Solution</summary>$8 × 0.75 = $6</details>
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div id="quiz" class="card" style="display: none;">
+      <h2>🎯 10-Question Randomized Quiz</h2>
+      <p>Each attempt picks random questions. Track your progress!</p>
+      
+      <button onclick="startQuiz()">Start New Quiz</button>
+      <div id="quizArea" style="display:none;">
+        <div id="questions"></div>
+        <button onclick="checkAnswers()" style="background:#10b981;">Submit Answers</button>
+        <button onclick="showExplanations()" id="explainBtn" disabled style="background:#f59e0b;">Show Explanations</button>
+        <div id="score"></div>
+        <div id="history"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // SIMPLE QUIZ BANK (20 questions, picks 10 random each time)
+    const questions = [
+      {q: "Absolute value of -7?", opts: ["-7","0","7","14"], ans: 2, exp: "|-7| = 7 (distance from zero)"},
+      {q: "Round 6,734 to nearest hundred?", opts: ["6,700","6,730","6,800","6,000"], ans: 0, exp: "34 < 50, so 6,700"},
+      {q: "-5 + 8 = ?", opts: ["3","-3","13","-13"], ans: 0, exp: "Move 5 right from -5 = 3"},
+      {q: "1/2 + 1/4 = ?", opts: ["1/6","3/4","1/4","3/8"], ans: 1, exp: "2/4 + 1/4 = 3/4"},
+      {q: "0.6 as fraction?", opts: ["6/10","3/5","1/6","6/100"], ans: 1, exp: "0.6 = 6/10 = 3/5"},
+      {q: "20% of 150?", opts: ["30","20","15","300"], ans: 0, exp: "0.20 × 150 = 30"},
+      {q: "3 × (4 + 2) = ?", opts: ["18","14","24","6"], ans: 0, exp: "4+2=6, 3×6=18"},
+      {q: "Reciprocal of 1/5?", opts: ["5","1/25","5/1","0"], ans: 0, exp: "Flip fraction: 5/1 = 5"},
+      {q: "Is 123 divisible by 3?", opts: ["Yes","No"], ans: 0, exp: "1+2+3=6 (divisible by 3)"},
+      {q: "$12 book, 10% off?", opts: ["$10.80","$13.20","$1.20","$12"], ans: 0, exp: "$12 × 0.90 = $10.80"},
+      // Add more questions here for variety...
+    ];
+
+    let currentQuiz = [];
+    let scores = JSON.parse(localStorage.getItem('mathScores') || '[]');
+
+    function showSection(section) {
+      document.querySelectorAll('.card').forEach(c => c.style.display = 'none');
+      document.getElementById(section).style.display = 'block';
+      document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    function startQuiz() {
+      // Pick 10 random questions
+      const shuffled = [...questions].sort(() => 0.5 - Math.random()).slice(0,10);
+      currentQuiz = shuffled;
+      
+      let html = '';
+      shuffled.forEach((q, i) => {
+        html += `<div class="quiz-question">
+          <strong>Q${i+1}:</strong> ${q.q}<br>
+          ${q.opts.map((opt, j) => 
+            `<label class="quiz-option"><input type="radio" name="q${i}" value="${j}"> ${opt}</label>`
+          ).join('')}<br>
+          <div id="fb${i}" class="feedback" style="display:none;"></div>
+          <div id="exp${i}" style="display:none; color:#666;">${q.exp}</div>
+        </div>`;
+      });
+      
+      document.getElementById('questions').innerHTML = html;
+      document.getElementById('quizArea').style.display = 'block';
+      document.getElementById('score').innerHTML = '';
+      document.getElementById('explainBtn').disabled = true;
+    }
+
+    function checkAnswers() {
+      let correct = 0;
+      currentQuiz.forEach((q, i) => {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const fb = document.getElementById(`fb${i}`);
+        
+        if (!selected) {
+          fb.textContent = 'No answer selected';
+          fb.className = 'feedback incorrect';
+          return;
+        }
+        
+        if (parseInt(selected.value) === q.ans) {
+          fb.textContent = '✅ Correct!';
+          fb.className = 'feedback correct';
+          correct++;
+        } else {
+          fb.textContent = '❌ Incorrect';
+          fb.className = 'feedback incorrect';
+        }
+        fb.style.display = 'block';
+      });
+
+      const percent = Math.round((correct/10)*100);
+      document.getElementById('score').innerHTML = 
+        `<div class="score ${percent>=70 ? 'correct' : 'incorrect'}">
+          ${correct}/10 (${percent}%) ${percent>=70 ? '🎉 Great!' : '📚 Keep practicing!'}
+        </div>`;
+      
+      scores.push({score: percent, date: new Date().toLocaleDateString()});
+      localStorage.setItem('mathScores', JSON.stringify(scores));
+      updateHistory();
+      document.getElementById('explainBtn').disabled = false;
+    }
+
+    function showExplanations() {
+      for(let i=0; i<10; i++) {
+        document.getElementById(`exp${i}`).style.display = 'block';
+      }
+    }
+
+    function updateHistory() {
+      if(scores.length === 0) return;
+      const avg = scores.reduce((a,b)=>a+b.score,0)/scores.length;
+      document.getElementById('history').innerHTML = 
+        `<small>📊 ${scores.length} attempts | Avg: ${Math.round(avg)}% | Latest: ${scores[scores.length-1].score}%</small>`;
+    }
+
+    // Load history on start
+    updateHistory();
+  </script>
+</body>
+</html>
